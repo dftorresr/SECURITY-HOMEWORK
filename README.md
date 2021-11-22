@@ -15,7 +15,6 @@ Ejecución de la aplicación:
 [Thread-0] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@4eb931f5{SSL, (ssl, http/1.1)}{0.0.0.0:4568}
 [Thread-0] INFO org.eclipse.jetty.server.Server - Started @1733ms 
 
- 
 Ejecución de la aplicación leyendo la URL de Google y de “hello world”, esta confía del certificado local creado. No confia en el certificado de google: 
 --- exec-maven-plugin:3.0.0:exec (default-cli) @ securityapp ---
 Transfer-Encoding:chunked
@@ -27,9 +26,6 @@ Hello World
 javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 ------------------------------------------------------------------------
 BUILD SUCCESS
-
-
-
 
 
 
