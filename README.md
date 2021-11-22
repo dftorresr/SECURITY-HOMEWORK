@@ -1,7 +1,7 @@
 # SECURITY-HOMEWORK
+
 Resumen:
 En este proyecto se creó una aplicación web de forma no segura y después se realiza el procedimiento para crear llaves públicas y privadas y un certificado utilizando formato PKCS12.
-
 Ejecución de la aplicación:
 --- exec-maven-plugin:3.0.0:exec (default-cli) @ securityapp ---
 [Thread-0] INFO org.eclipse.jetty.util.log - Logging initialized @312ms to org.eclipse.jetty.util.log.Slf4jLog
@@ -15,6 +15,7 @@ Ejecución de la aplicación:
 [Thread-0] INFO org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@4eb931f5{SSL, (ssl, http/1.1)}{0.0.0.0:4568}
 [Thread-0] INFO org.eclipse.jetty.server.Server - Started @1733ms 
 
+ 
 Ejecución de la aplicación leyendo la URL de Google y de “hello world”, esta confía del certificado local creado. No confia en el certificado de google: 
 --- exec-maven-plugin:3.0.0:exec (default-cli) @ securityapp ---
 Transfer-Encoding:chunked
@@ -26,8 +27,6 @@ Hello World
 javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
 ------------------------------------------------------------------------
 BUILD SUCCESS
-
-
 
 Ejecución de la aplicación Ejecución de la aplicación leyendo la URL de Google y de “hello world”, confía el certificado de Google y no de la app creada:
 
@@ -51,5 +50,3 @@ Content-Type:text/html; charset=ISO-8859-1
 (function(){google.jl={attn:false,blt:'none',chnk:0,dw:false,dwu:true,emtn:0,end:0,ine:false,lls:'default',pdt:0,rep:0,snet:true,strt:0,ubm:false,uwp:true};})();(function(){var pmc='{\x22d\x22:{},\x22sb_he\x22:{\x22agen\x22:false,\x22cgen\x22:false,\x22client\x22:\x22heirloom-hp\x22,\x22dh\x22:true,\x22dhqt\x22:true,\x22ds\x22:\x22\x22,\x22ffql\x22:\x22es\x22,\x22fl\x22:true,\x22host\x22:\x22google.com\x22,\x22isbh\x22:28,\x22jsonp\x22:true,\x22msgs\x22:{\x22cibl\x22:\x22Borrar búsqueda\x22,\x22dym\x22:\x22Quizás quisiste decir:\x22,\x22lcky\x22:\x22Me siento con suerte\x22,\x22lml\x22:\x22Más información\x22,\x22oskt\x22:\x22Herramientas de captura de texto\x22,\x22psrc\x22:\x22Se ha eliminado esta búsqueda de tu \\u003Ca href\x3d\\\x22/history\\\x22\\u003EHistorial web\\u003C/a\\u003E\x22,\x22psrl\x22:\x22Eliminar\x22,\x22sbit\x22:\x22Buscar por imágenes\x22,\x22srch\x22:\x22Buscar con Google\x22},\x22ovr\x22:{},\x22pq\x22:\x22\x22,\x22refpd\x22:true,\x22rfs\x22:[],\x22sbas\x22:\x220 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08)\x22,\x22sbpl\x22:16,\x22sbpr\x22:16,\x22scd\x22:10,\x22stok\x22:\x22BinMyNHsI-PPcVGCFAb0CtGJw0c\x22,\x22uhde\x22:false}}';google.pmc=JSON.parse(pmc);})();</script>        </body></html>
 ------------------------------------------------------------------------
 BUILD SUCCESS
-
-
